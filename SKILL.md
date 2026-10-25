@@ -68,13 +68,13 @@ Negative space should breathe, but it should never look abandoned. Instead of fi
     - *Policy / Declaration:* The leader speaking passionately at the podium with expressive hand gestures, intense eye contact, microphones, and podium gravitas.
     - *Field / Ground Operations:* The subject on-site (walking through rice fields, inspecting harvests, interacting with workers, on military vessels).
   - **Dynamic News Typography:** Avoid polite, timid textbook sentences. News typography demands **bold urgency, high contrast, and dynamic emphasis**: massive heavyweight display sans (*Plus Jakarta Sans 800*, *Syne*, *Cabinet Grotesk*) with highlighted critical phrases in national red or yellow amber, pulling the reader's eye immediately.
-- ⚠️ **The "Kokasia Design Taste" Blueprint (High-Taste Carousel & Slide 1 Hook Mastery):**
-  - **Why Kokasia.id excels at visual design & engagement:**
+- ⚠️ **The "Agency-Grade Editorial Taste" Blueprint (High-Taste Carousel & Slide 1 Hook Mastery):**
+  - **Core Pillars of High-Performing Visual Design & Carousel Engagement:**
     1. *The Slide 1 "Pattern Interrupt" Hook:* Slide 1 is NEVER a passive title card. It uses a high-voltage psychological hook:
-       - Contrarian stance (*"Semua ngomongin Claude, tapi Minko saranin JANGAN pakai Claude"*).
-       - Visual aesthetic eye candy (*2026 soft mesh gradient swatch card*).
-       - Culturally relatable industry pain points framed with high editorial elegance (*Agency deadline confession on pristine minimalist paper*).
-       - Real-world experiential case studies (*M Bloc Space Spider-Man photobooth funnel*).
+       - Contrarian stance (*"Everyone is hyping up tool X, but here is why you shouldn't jump in blindly"*).
+       - Visual aesthetic eye candy (*soft mesh gradient swatch cards, curated design system tokens*).
+       - Culturally relatable industry pain points framed with high editorial elegance (*creative agency deadline realities on pristine minimalist paper*).
+       - Real-world experiential case studies (*event activation photobooth funnels, physical-to-digital journeys*).
     2. *Swiss Minimalist Cleanliness & Breathability:* Whitespace is king. Uses warm off-whites (`#f8f8f8`, `#eaeaea`) or deep midnight navy (`#020b18`). Zero clutter, generous margins (>80px), crisp micro-metadata tags.
     3. *Editorial Product/Funnel Visuals:* Visualizes workflows (step 1 to 5 user journey) or actionable color code swatches, making every carousel slide inherently save-worthy and share-worthy.
     4. *Conversational Authority:* Typography balances sharp modern geometric sans (*Plus Jakarta Sans*, *Inter*) with conversational, approachable copy.
