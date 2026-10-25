@@ -62,6 +62,12 @@ Negative space should breathe, but it should never look abandoned. Instead of fi
 - ⚠️ **The "Imprisoned Photo" Trap:**
   - In genres driven by visual emotion (Travel, Nature, Luxury, Sports), never imprison the hero image in a tiny 40% box while filling 60% of the canvas with text and borders.
   - The photography must breathe and dominate (70–100% canvas coverage). Integrate elegant typography directly into the natural negative space of the photograph (sky, sea, misty horizons, shadows) using soft cinematic scrims.
+- ⚠️ **The "Stiff Studio Portrait in News" Fallacy (Lack of Contextual Journalism):**
+  - NEVER use a stiff, formal studio pasfoto (neutral expression, staring blankly at camera) for news graphics regarding bold actions, policies, or national crises (e.g. food security, protests, economic reforms). It looks like a civil servant identity card or obituary notice, completely draining the news of urgency and drama.
+  - **The Action Journalism Rule:** Always pair the news story with **contextual action photography**:
+    - *Policy / Declaration:* The leader speaking passionately at the podium with expressive hand gestures, intense eye contact, microphones, and podium gravitas.
+    - *Field / Ground Operations:* The subject on-site (walking through rice fields, inspecting harvests, interacting with workers, on military vessels).
+  - **Dynamic News Typography:** Avoid polite, timid textbook sentences. News typography demands **bold urgency, high contrast, and dynamic emphasis**: massive heavyweight display sans (*Plus Jakarta Sans 800*, *Syne*, *Cabinet Grotesk*) with highlighted critical phrases in national red or yellow amber, pulling the reader's eye immediately.
 - ⚠️ **The "Header-Headline-Photo-Footer Sandwich" Monotony:**
   - NEVER fall into the repetitive trap of always using the same vertical stack:
     1. Top thin header bar with logo + date/edition + horizontal divider.
