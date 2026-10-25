@@ -106,6 +106,30 @@ Negative space should breathe, but it should never look abandoned. Instead of fi
 - ⚠️ **Visual Clutter & Micro-Text Overkill:**
   - Maximum 3 typographic hierarchical tiers. If a poster has a header, eyebrow, badge, giant title, script accent, subhead, 3-column specs, price tag, sub-price, and CTA pill—it is over-engineered AI slop. Strip away 50% of the text; let the subject breathe.
 
+### 7. The Golden Rules of Instagram Carousel Slide 1 (Cover / Hook)
+Slide 1 is the front cover of a multi-slide carousel. It has exactly ONE job: **Stop the thumb in the feed and evoke irresistible curiosity to swipe.**
+- **Extreme Text Economy (Minim Teks):**
+  - **Never dump explanations, data cards, or telemetry tables on Slide 1.** All technical analysis, steps, and details belong strictly to Slide 2, 3, 4, and beyond.
+  - Slide 1 should contain **fewer than 15 words total** across the entire canvas:
+    1. A subtle, elegant category kicker (e.g. `CYBERSECURITY ZERO-DAY`).
+    2. A massive, high-tension Hook Headline (e.g. `Website kamu masih pakai PHP?`).
+    3. A single provocative sub-hook line (e.g. *Kemarin, 70% sistem dunia nyaris bobol.*).
+    4. A quiet, disciplined slide counter (e.g. `01 / 05`).
+- **No Template Crutches / AI Slop Triggers:**
+  - 🚫 NEVER add pill boxes with `• LIVE`, `• ALERT`, or pulsing colored dots on Slide 1.
+  - 🚫 NEVER force a vertical rotated text spine on the left margin as a formulaic habit.
+  - 🚫 NEVER add fake website buttons (`[ GESER SEKARANG → ]`). A clean typographic hint (`Geser untuk cek →`) is enough.
+
+### 8. The Asset Philosophy (Contextual, Unified, and Story-Driven)
+The asset is not an afterthought or decorative sticker; it is the visual proof and soul of the concept.
+- **Direct Semantic Relevance:**
+  - The asset must directly embody the topic. In a PHP security incident, use the iconic PHP ElePHPant mascot fractured with internal glowing fault lines, or actual compromised server architecture—never a generic cartoon lock or random shield icon.
+  - In political/social news, use dynamic action photography (speaking passionately at the podium, in the field), never a stiff bureaucratic passport photo.
+- **Flawless Environmental Integration (No "Pasted Sticker" Syndrome):**
+  - The asset must organically belong to the canvas lighting: top key lights, soft ambient fill, and realistic soft ground contact shadows and ambient occlusion.
+  - Never allow raw, jagged edges, halo fringe, or clipped bottoms to float awkwardly in a void.
+  - The background must naturally flow into the asset without artificial boundary boxes.
+
 ### 6. Genre-Specific Psychology & Rules
 
 | Genre | Core Emotional Trigger | Visual Medium & Treatment | Typography Tone | Color Atmosphere |
