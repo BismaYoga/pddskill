@@ -130,6 +130,19 @@ The asset is not an afterthought or decorative sticker; it is the visual proof a
   - Never allow raw, jagged edges, halo fringe, or clipped bottoms to float awkwardly in a void.
   - The background must naturally flow into the asset without artificial boundary boxes.
 
+### 9. Optical Equilibrium & Counterweighting (Anti-Lopsided Layouts)
+When designing with extreme minimalism (only Hook Headline + Hero Asset), typography placement must establish deliberate optical balance:
+- ⚠️ **The Lopsided Left-Heavy Trap:**
+  - If the hero visual asset is centered horizontally on the canvas, stacking a massive bold headline in the top-left corner without any counterweight on the right creates an awkward, hollow asymmetry. The entire design feels like it is tipping to the left.
+  - In crowded multi-card designs, a top-left title is often balanced by a right-side card. But in clean, minimal covers, there are no filler cards to rescue a lopsided title!
+- **Two Proven Equilibrium Archetypes for Minimal Covers:**
+  1. **Optical Center Axis Alignment (Monumental Gravitas):**
+     - Align the kicker, hook headline, italic subtitle, and centered asset along the central vertical axis (`text-align: center`, symmetrical margins).
+     - Both left and right margins breathe with generous, equal negative space. It feels intentional, stately, and balanced like an Apple keynote or luxury magazine cover.
+  2. **Cinematic Bottom Anchor (Asset-First Momentum):**
+     - Allow the hero visual asset to command the upper 60% of the canvas as the immediate visual pattern interrupt.
+     - Settle the bold hook headline and subtitle in the lower third, creating a grounded foundation that leads naturally into the swipe cue.
+
 ### 6. Genre-Specific Psychology & Rules
 
 | Genre | Core Emotional Trigger | Visual Medium & Treatment | Typography Tone | Color Atmosphere |
