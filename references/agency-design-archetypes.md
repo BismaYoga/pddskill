@@ -164,3 +164,36 @@ Figma ignores `@import url(...)` inside SVG `<style>` tags. Always declare `font
   </g>
 </svg>
 ```
+
+---
+
+## 4. Modern Frosted Glassmorphism Recipe (Luxury Gallery Glass)
+
+When the design calls for a glass effect, NEVER draw flat grey cards with cheap drop shadows. Execute **optical museum gallery glass** with specular highlights and ambient refraction:
+
+```css
+/* Optical Frosted Glass Panel / Floating Dock */
+.glass-panel {
+  background: rgba(28, 25, 23, 0.45); /* Warm tinted glass matching canvas hex */
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.22); /* Specular top light catch */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 28px;
+  box-shadow: 
+    0 24px 48px -12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Pair with an ambient bloom behind the glass to create authentic light diffusion */
+.ambient-refraction-bloom {
+  position: absolute;
+  width: 800px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(217, 119, 87, 0.18) 0%, transparent 70%);
+  filter: blur(60px);
+  z-index: 1;
+}
+```
