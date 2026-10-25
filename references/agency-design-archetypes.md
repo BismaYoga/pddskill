@@ -1,121 +1,166 @@
-# Professional Agency Graphic Design Archetypes
+# Contemporary Studio Design Archetypes & Figma SVG Reference
 
-Extracted from top Behance, Dribbble, and Instagram creative agency portfolio frameworks.
+Curated modern design systems inspired by contemporary creative studios (Pentagram, Linear, Apple Editorial, Kinfolk, Nike Brand Studio, and modern visual newsrooms). Zero UI-slop, zero fake buttons, zero bullet/pill clutter.
 
 ---
 
-## 1. The Anatomy of High-Converting Agency Graphics
+## 1. Six Modern Studio Archetypes
 
-Across top design agencies (e.g. Vmedex, AgyWeb, Zenith, CoinGuard), every high-performing feed slide is built upon a **3-Layer Depth Engine**:
+### Archetype A: Dark Precision Tech & Cybersecurity (Linear / Apple Pro Aesthetic)
+- **Best For:** Software engineering, AI, cybersecurity incidents, SaaS architecture, developer deep-dives.
+- **Color System:**
+  - Canvas Base: `#050609` (Deep Obsidian)
+  - Primary Text: `#f8fafc` (Crisp Ice White)
+  - Muted Editorial Copy: `#94a3b8` (Slate 400)
+  - Focal Highlight Gradient: `#fdba74` → `#f97316` (Magma Amber) or `#7dd3fc` → `#0284c7` (Electric Ice)
+- **Typography Pairing:**
+  - Display Headline: `Plus Jakarta Sans` (`800`–`900`, `letter-spacing: -2.5px`, `word-spacing: 10px`)
+  - Sub-hook Accent: `Instrument Serif` (`400 Italic`, `36px–42px`, `color: #cbd5e1`)
+  - Kicker / Counter: `JetBrains Mono` or `Fira Code` (`500`, `18px–20px`, `letter-spacing: 0.2em`, pure uppercase, **no dots or pills**)
+- **Spatial Treatment:**
+  - Single dramatic 3D sculptural hero asset seamlessly blended (`prepare_asset.py place-seamless`) into the lower (`Y: 520px+`) or upper (`Y: 60px–760px`) zone. Subtle radial ambient glow behind subject (`opacity: 0.12`), 45% pure negative space.
 
+---
+
+### Archetype B: Swiss Minimalist Editorial & Carousel Grid (Pentagram / International Style)
+- **Best For:** Design essays, business strategy carousels, startup insights, cultural commentary, minimalist Slide 2–5 breakdowns.
+- **Color System:**
+  - Canvas Base: `#f5f3ee` (Warm Gallery Paper) or `#ededeb` (Swiss Stone)
+  - Primary Ink: `#111215` (Carbon Ink)
+  - Secondary Copy: `#52525b` (Warm Graphite)
+  - Signal Accent: `#e11d48` (Editorial Vermilion) or `#1d4ed8` (International Klein Blue)
+- **Typography Pairing:**
+  - Display Headline: `Plus Jakarta Sans` (`800`) or `Inter` (`800`, tight tracking + `word-spacing: 8px`)
+  - Accent Keyword / Pull-Quote: `Instrument Serif` (`Italic`)
+  - Structural Index Numbers (`01`, `02`): `Plus Jakarta Sans` (`700`, `20px`)
+- **Spatial Treatment:**
+  - Asymmetric 12-column grid, crisp `1px solid rgba(17, 18, 21, 0.12)` architectural hairlines (never boxed cards with drop shadows), generous `84px` outer margins, bold typographic contrast.
+
+---
+
+### Archetype C: Quiet Luxury Travel & Architecture (Kinfolk / Architectural Digest)
+- **Best For:** Hospitality, boutique resorts, travel destinations, real estate, slow living, nature sanctuaries.
+- **Color System:**
+  - Full-Bleed Photography Base + Dark Botanical/Espresso Scrim (`#0c1612` or `#17120e`)
+  - Primary Text: `#faf6f0` (Warm Ivory Linen)
+  - Warm Metallic Accent: `#e2b887` (Sunlit Travertine / Champagne Ochre)
+- **Typography Pairing:**
+  - Display Title: `Cormorant Garamond` (`600`, `84px–104px`, wide luxury tracking `letter-spacing: 0.14em` for single-word titles) or `Instrument Serif` (`400`, `88px`)
+  - Poetic Subhead: `Cormorant Garamond` (`400 Italic`, `36px`)
+  - Architectural Metadata: `Plus Jakarta Sans` (`500`, `18px`, `letter-spacing: 0.22em`, uppercase)
+- **Spatial Treatment:**
+  - `100%` full-bleed golden-hour photography. Delicate `1px solid rgba(250, 246, 240, 0.22)` inset editorial frame (`44px` inset) optional. Multi-stop scrim over sky/shadows so text never fights bright foliage or mist. Zero pill badges.
+
+---
+
+### Archetype D: Kinetic Sport & Cultural Event Poster (Nike Studio / Contemporary Print)
+- **Best For:** Running clubs, tournaments, music festivals, street culture, high-energy product drops.
+- **Color System:**
+  - Base: `#f2efe9` (Raw Poster Stock) or `#090a0c` (Asphalt Black)
+  - High-Voltage Accent: `#ccff00` (Volt Acid) or `#ff4400` ( Track Blaze)
+- **Typography Pairing:**
+  - Monumental Display: `Syne` (`800`) or `Anton` (`400`, `96px–128px`, `line-height: 0.90`, `word-spacing: 10px`)
+  - Technical Spec Copy: `Space Grotesk` (`500`–`700`, `20px–24px`)
+- **Spatial Treatment:**
+  - Full-bleed motion photography or rim-lit dynamic athlete overlapping monumental typography. Corner registration crosshairs (`+`) or clean coordinate stamps (`JKT // 10K`) instead of web cards.
+
+---
+
+### Archetype E: Sensory Culinary & Artisanal F&B (Bon Appétit / Modern Bistro)
+- **Best For:** Restaurants, coffee roasters, craft burgers, bakeries, seasonal menus, gourmet promos.
+- **Color System:**
+  - Warm Appetite Palette: `#1a120d` (Roasted Espresso), `#fffbeb` (Warm Buttercream), `#f59e0b` (Honey Glaze), `#dc2626` (Chili Warmth)
+- **Typography Pairing:**
+  - Expressive Display: `Fraunces` (`800`–`900`, soft warm curves) or `Bricolage Grotesque` (`800`)
+  - Supporting Copy: `Plus Jakarta Sans` (`500`, `24px–28px`)
+- **Spatial Treatment:**
+  - Macro full-bleed food photography showing real texture, steam, crumbs, wood/stone/parchment, and warm directional sunlight. **Strict zero-cutout rule**—blend typography into dark ambient wood/tabletop depth-of-field via warm espresso scrims.
+
+---
+
+### Archetype F: Modern Visual Newsroom & Public Policy (Financial Times / Tempo / Vox Style)
+- **Best For:** Breaking news, presidential/government policy, economic reports, investigative journalism, market movers.
+- **Color System:**
+  - Deep Newsroom Base: `#090b10` (Midnight Press)
+  - Primary Headline: `#ffffff`
+  - Key Phrase Emphasis: `#ef4444` (Urgent Editorial Red) or `#facc15` (Signal Amber)
+- **Typography Pairing:**
+  - Headline: `Plus Jakarta Sans` (`800`–`900`, `68px–84px`, `line-height: 1.0`, tight lockup)
+  - Context Deck: `Plus Jakarta Sans` (`400`–`500`, `26px–30px`, `#cbd5e1`)
+  - Rubric Kicker: `Plus Jakarta Sans` (`700`, `19px`, `letter-spacing: 0.18em`, uppercase accent color with a clean `3px` left accent bar or `40px` top rule—no pill capsule, no dot)
+- **Spatial Treatment:**
+  - **Action Journalism Photography** in upper 62% (expressive podium gesture, field visit, dramatic lighting), transitioning via a deep smooth 4-stop linear scrim (`transparent` at `38%` → `rgba(9,11,16,0.88)` at `64%` → `#090b10` at `82%`) into an authoritative lower-third headline lockup.
+
+---
+
+## 2. CSS Multi-Stop Scrim Recipes (Guaranteed 4.5:1 Legibility)
+
+```css
+/* Bottom-Anchored Typography Scrim (Smooth film falloff, never harsh gray band) */
+.scrim-bottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 9, 14, 0.35) 0%,
+    rgba(6, 9, 14, 0.00) 32%,
+    rgba(6, 9, 14, 0.72) 60%,
+    rgba(6, 9, 14, 0.95) 78%,
+    #06090e 100%
+  );
+  pointer-events: none;
+}
+
+/* Top-Anchored Typography Scrim */
+.scrim-top {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 9, 14, 0.92) 0%,
+    rgba(6, 9, 14, 0.65) 28%,
+    rgba(6, 9, 14, 0.00) 52%
+  );
+  pointer-events: none;
+}
 ```
-┌────────────────────────────────────────────────────────┐
-│ Layer 3: HUD & Information Overlay                    │
-│  - Micro-badges, category pills, tracking +1.5px       │
-│  - Hero headline (Ultra-bold sans + italic serif)      │
-│  - Floating metric chips & glass badges                │
-├────────────────────────────────────────────────────────┤
-│ Layer 2: Hero Asset & Physical Focal Point             │
-│  - 3D hyper-rendered object or cutout photography      │
-│  - Breaking boundaries (overlapping text & containers) │
-│  - Specular rim light (Fresnel highlights)             │
-│  - Diffuse drop shadows (contact shadow + ambient)     │
-├────────────────────────────────────────────────────────┤
-│ Layer 1: Atmosphere & Dimensional Backdrop             │
-│  - Deep radial vignette / directional spotlight        │
-│  - Subtle isometric perspective grid or particle noise │
-│  - Neon gradient beam or ambient color splash          │
-└────────────────────────────────────────────────────────┘
+
+---
+
+## 3. Figma-Native Editable SVG Template
+
+Figma ignores `@import url(...)` inside SVG `<style>` tags. Always declare `font-family`, `font-weight`, `font-size`, `letter-spacing`, and `fill` **directly as XML attributes** on `<text>` and `<tspan>` nodes so layers open cleanly as editable text in Figma:
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg-scrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050609" stop-opacity="0.92"/>
+      <stop offset="46%" stop-color="#050609" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050609" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Layer 1: Unified Canvas Image -->
+  <image id="Canvas-Backdrop" href="data:image/jpeg;base64,..." x="0" y="0" width="1080" height="1350" preserveAspectRatio="xMidYMid slice"/>
+  <rect id="Contrast-Scrim" width="1080" height="1350" fill="url(#bg-scrim)"/>
+
+  <!-- Layer 2: Editable Typography Group (Direct XML Font Attributes for Figma) -->
+  <g id="Editorial-Header" transform="translate(540, 130)" text-anchor="middle">
+    <text id="Kicker" y="0" font-family="JetBrains Mono, Fira Code, monospace" font-size="19" font-weight="600" letter-spacing="4" fill="#94a3b8">CYBERSECURITY REPORT</text>
+    <text id="Headline-Line-1" y="88" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="84" font-weight="800" letter-spacing="-2" fill="#f8fafc">WEBSITE KAMU</text>
+    <text id="Headline-Line-2" y="172" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="84" font-weight="800" letter-spacing="-2" fill="#f8fafc">MASIH PAKAI <tspan fill="url(#accent-grad)">PHP?</tspan></text>
+    <text id="Subhook" y="238" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="38" font-weight="400" fill="#cbd5e1">Kemarin, 70% sistem website dunia nyaris bobol.</text>
+  </g>
+
+  <!-- Layer 3: Minimal Footer Metadata -->
+  <g id="Slide-Footer" transform="translate(0, 1272)">
+    <text x="80" y="0" font-family="JetBrains Mono, monospace" font-size="19" font-weight="600" letter-spacing="2" fill="#f8fafc">01 <tspan fill="#64748b">/ 05</tspan></text>
+    <text x="1000" y="0" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="600" letter-spacing="2" fill="#94a3b8">GESER →</text>
+  </g>
+</svg>
 ```
-
----
-
-## 2. The 6 Agency Archetypes
-
-### Archetype A: High-Tech Obsidian & Neon Flame (`agyweb.com`)
-- **Vibe:** Avant-garde digital product studio, futuristic web development.
-- **Palette:**
-  - Base: `#08080a` (Obsidian), `#121216` (Card surface)
-  - Accent: `#ff5500` to `#ff7700` (Burning Ember / Electric Neon Orange)
-  - Text: `#ffffff` (Primary), `rgba(255,255,255,0.65)` (Secondary)
-- **Typography Recipe:**
-  - Heavy Display Sans (e.g., *Plus Jakarta Sans* 800 or *Syne* 800) paired with a high-contrast Editorial Serif Italic (*Playfair Display* or *Instrument Serif*) for a single power keyword.
-  - Example: `Websites that <span class="serif-accent">Convert</span>`
-- **Key Visual Elements:**
-  - Isometric glowing terrain or glass podium
-  - Glowing orange spotlight beam dropping from top-center
-  - Glassmorphic floating cards with `backdrop-filter: blur(24px)` and `border: 1px solid rgba(255,85,0,0.3)`
-
----
-
-### Archetype B: Web3 SaaS & 3D Glass Security (`CoinGuard`)
-- **Vibe:** Enterprise crypto security, algorithmic fintech, trust & precision.
-- **Palette:**
-  - Base: Deep Midnight Navy (`#03091e`) to Royal Blue (`#0d2159`)
-  - Accent: Electric Cyan (`#00f2fe`) & Soft Lavender (`#8a70ff`)
-  - Neutral: Ultra-crisp `#ffffff`
-- **Key Visual Elements:**
-  - Glossy 3D tactile assets: glowing padlock, holographic coins, hourglass, floating data nodes
-  - Radial spotlight behind the hero 3D asset
-  - Floating status pills with pill icon + text (`Verified Audit`, `Zero-Knowledge`)
-  - Clean pill CTA button: white pill with bold dark navy text
-
----
-
-### Archetype C: High-Stakes Fintech & Trading (`Zenith Trading`)
-- **Vibe:** Wealth creation, algorithmic trading, discipline, power.
-- **Palette:**
-  - Base: Matte Carbon Black (`#0a0b0d`)
-  - Accent: Vibrant Emerald Neon (`#10b981` / `#00ff88`)
-  - Supporting: Ice Silver (`#e2e8f0`)
-- **Key Visual Elements:**
-  - Glowing 3D candlestick charts & holographic line graphs
-  - Polished metallic shields, gold bullion, or neon directional arrows
-  - High-contrast HUD indicators (`+142.8%`, `EXECUTION: 0.04s`)
-  - Strong grid background with 4% opacity white lines
-
----
-
-### Archetype D: Creative Studio Royal Grid (`VMEDEX Digital`)
-- **Vibe:** Vibrant full-service creative agency, branding & social growth.
-- **Palette:**
-  - Base: Electric Ultramarine / Royal Blue (`#1a4bfa` to `#0a2ed4`)
-  - Contrast: Pure White cards, Neon Yellow or Coral Orange accent tags
-- **Key Visual Elements:**
-  - High-key studio lighting with rim-lit photography cutouts
-  - Floating 3D emoji / icon bubbles (`Instagram`, `TikTok`, `Meta`)
-  - Rounded container cards (border-radius 32px) with sharp inner padding
-
----
-
-### Archetype E: Clinical Medical & Trust Health (`Kemenkes / Hospital`)
-- **Vibe:** Institutional trust, health clarity, preventive care.
-- **Palette:**
-  - Base: Pure Clean White (`#ffffff`) with Sky Medical Blue (`#0ea5e9` to `#0284c7`)
-  - Accents: Soft Alert Red/Coral (`#ef4444`) for emergency badges, Mint Green (`#10b981`) for verified
-- **Key Visual Elements:**
-  - Crisp isolated portrait of medical personnel (friendly, direct eye contact)
-  - Numbered symptom cards or checklist badges with subtle drop shadows
-  - Official stamp / QR code lockup in bottom corner
-
----
-
-### Archetype F: Campus & Dynamic Youth Collage (`UNILIBRE University`)
-- **Vibe:** Energetic, youthful, bold, inspirational, dynamic momentum.
-- **Palette:**
-  - Base: Vivid Cyan Blue (`#0070f3`) & Deep Navy (`#00103a`)
-  - Accent: High-vis Lemon Yellow (`#facc15`)
-- **Key Visual Elements:**
-  - Cutout of energetic student breaking through massive condensed typography
-  - Halftone dot patterns, paper airplane vectors, folded paper tape badges
-  - Angled dynamic layout (3°–5° tilt on graphic cards)
-
----
-
-## 3. The 5 Golden Execution Rules
-
-1. **Optical Centering:** Place the core visual mass at 42–45% of vertical height, never 50%.
-2. **Typographic Lockup:** Keep title + subtitle under 16px distance. Never space them evenly across the whole canvas.
-3. **Lighting Direction:** Ambient light must be consistent. If a spotlight comes from top-left, all specular edges must align with top-left.
-4. **Specular Highlight Borders:** On dark cards, use `border: 1px solid rgba(255, 255, 255, 0.12)` with a gradient top edge `linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0.02))`.
-5. **Legibility Gate:** Text over image must always use a scrim/gradient mask (`background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)`).
