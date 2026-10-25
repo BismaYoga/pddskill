@@ -116,9 +116,10 @@ Slide 1 is the front cover of a multi-slide carousel. It has exactly ONE job: **
     3. A single provocative sub-hook line (e.g. *Kemarin, 70% sistem dunia nyaris bobol.*).
     4. A quiet, disciplined slide counter (e.g. `01 / 05`).
 - **No Template Crutches / AI Slop Triggers:**
-  - 🚫 NEVER add pill boxes with `• LIVE`, `• ALERT`, or pulsing colored dots on Slide 1.
+  - 🚫 **TOTAL BAN on Bullets and Dots (`•`, `●`, `.kicker-dot`):** NEVER prepend text with dots, bullets, or pulsing circle badges (`• LIVE`, `• ALERT`, `• EDITION 01`). NEVER use `•` as a separator in footers or metadata. Pure typography and clean kerning convey confidence and authority; dots and bullets are a hallmark of amateur AI generation.
+  - 🚫 NEVER add pill boxes or bordered capsules around category tags on Slide 1.
   - 🚫 NEVER force a vertical rotated text spine on the left margin as a formulaic habit.
-  - 🚫 NEVER add fake website buttons (`[ GESER SEKARANG → ]`). A clean typographic hint (`Geser untuk cek →`) is enough.
+  - 🚫 NEVER add fake website buttons (`[ GESER SEKARANG → ]`). A clean typographic hint (`Geser →`) is enough.
 
 ### 8. The Asset Philosophy (Contextual, Unified, and Story-Driven)
 The asset is not an afterthought or decorative sticker; it is the visual proof and soul of the concept.
@@ -129,6 +130,10 @@ The asset is not an afterthought or decorative sticker; it is the visual proof a
   - The asset must organically belong to the canvas lighting: top key lights, soft ambient fill, and realistic soft ground contact shadows and ambient occlusion.
   - Never allow raw, jagged edges, halo fringe, or clipped bottoms to float awkwardly in a void.
   - The background must naturally flow into the asset without artificial boundary boxes.
+- **The Spatial Yield Rule (Asset and Typography Must Never Fight for Center Stage):**
+  - NEVER freeze the visual asset in the dead vertical center (50% Y-axis) and then try to cram typography above or below it. This suffocates the layout and makes the text uncomfortably cramped.
+  - **If Typography is at the TOP:** The asset MUST be lowered into the lower half (Y = 550px–1300px), giving the top 500px of pure, luxurious breathing space for the headline and subtitle.
+  - **If Typography is at the BOTTOM:** The asset MUST be elevated into the upper half (Y = 80px–750px), creating a bold visual magnet at the top while grounding the title comfortably in the lower third.
 
 ### 9. Optical Equilibrium & Counterweighting (Anti-Lopsided Layouts)
 When designing with extreme minimalism (only Hook Headline + Hero Asset), typography placement must establish deliberate optical balance:
