@@ -64,6 +64,24 @@ Divide the canvas into 4 visual quadrants (Top-Left, Top-Right, Bottom-Left, Bot
 - If a directional subject (e.g., cybernetic robot arm) enters from Bottom-Left pointing toward Top-Right, the Top-Left must hold the headline lockup, and Bottom-Right must hold the grounding copy container to complete the diagonal kinetic counterweight.
 - **Bottom Sheet Containment Ratio:** The height of any bottom sheet or container card must tightly hug its typography (`padding: 48px–56px`). Never leave a 150px–200px blank empty void at the bottom of a card—this creates a hollow "jompang" bottom.
 
+### 2.5 Negative Space & Asset Spatial Harmony (Anti-Crowding & Anti-Occlusion)
+Balance is NOT just text alignment—it is the harmonious relationship between **Asset Mass**, **Text Mass**, and **Negative Space (Empty Space)**:
+- **Negative Space Equilibrium:** Empty space must be distributed intentionally, not accidentally. Never trap 60% of the canvas as a dead empty void at the top while cramming text and asset into the bottom 40%. The hero asset and typography should occupy the canvas with balanced optical breathing room on all sides.
+- **Asset Integrity & Non-Occlusion:** Never awkwardly cover, bury, or clip critical 3D assets behind cards or containers. If a 3D asset overlaps a bottom sheet, the asset must be 80%+ visible and elevated above the card with directional drop shadows, NOT suffocated or amputated by the container.
+- **Clean Canvas & Zero Corner Clutter:** Eliminate useless decorative corner tags (e.g. `REPORT // 2026`, fake tech badges, corner checkmarks, arbitrary labels). Modern high-taste design is radically clean: keep only essential anchors (e.g., quiet slide counter `01 / 05` and swipe cue `Geser →`). Let the reader focus 100% on the core message and visual hero.
+
+---
+
+### 3.1 Modern Social Editorial Copywriting & The "Scroll-Stopper" Hook
+A graphic design poster or carousel lives and dies by its editorial hook. Never write like an academic research paper or stiff corporate documentation:
+- **Embody the Modern Reader:** Write from the perspective of an ambitious, curious modern professional/creator scrolling their feed. The hook must trigger immediate curiosity, FOMO, or a paradigm shift in under 2 seconds.
+- **Tension-Driven Hooks:** Use contrast and provocation over bland descriptions:
+  - ❌ *Boring/Academic:* "Analisis Fitur Extended Reasoning Pada Model Claude 3.7 Sonnet"
+  - ✅ *Punchy & Relatable:* "Claude AI Itu Bukan ChatGPT. Ini Alasan Kenapa Banyak yang Mulai Pindah."
+- **Text Economy (Concise & High-Yield):**
+  - Never force paragraphs where space is tight. Say more with fewer, sharper words.
+  - Break complex concepts into punchy, conversational, jargon-free explanations that anyone understands immediately.
+
 ---
 
 ### 5.1 Dynamic Carousel Pacing Wave (Anti-Monotony Directive)
@@ -137,11 +155,14 @@ Follow these 5 steps strictly on every design task:
 - **Figma Compatibility Rule:** Figma ignores external `@import url(...)` inside `<style>`. Always set `font-family`, `font-weight`, `font-size`, `letter-spacing`, and `fill` **directly as XML attributes** on `<text>` and `<tspan>` elements (see template in [agency-design-archetypes.md](./references/agency-design-archetypes.md)).
 
 ### Step 5: MANDATORY Visual Self-Critique Gate (Before Replying!)
-- **NEVER send a design to the user blind.** After rendering, you **MUST view the generated PNG/preview image** (`read_file` / `view_file`) and verify all 6 checks:
-  1. **Zero Slop:** No `•` bullets/dots, no pill capsules, no fake buttons, no floating clipart?
+- **NEVER send a design to the user blind.** After rendering, you **MUST view the generated PNG/preview image** (`read_file` / `view_file`) and rigorously audit the design against these 9 fundamental criteria:
+  1. **Zero Slop:** No `•` bullets/dots, no pill capsules, no fake buttons, no floating clipart, no UI window titlebars?
   2. **Word Spacing & Margins:** No collided uppercase words (`WEBSITEKAMU`) and `>= 72px` safe edge margins?
   3. **Seamless Blending:** Zero visible rectangular seam/box around the hero subject?
-  4. **Spatial Yield:** Hero subject and headline each have clean breathing space without cramping?
-  5. **Optical Equilibrium:** Visual weight feels balanced left-to-right and top-to-bottom?
-  6. **Mobile Contrast & Scale:** All micro-copy `>= 18px` and crisp (`>= 4.5:1` contrast) over highlights?
-- If **any** check fails, fix the HTML/CSS or asset and re-render *before* presenting the final deliverables.
+  4. **Negative Space Balance:** Is empty space intentionally distributed across the whole canvas, or is there an awkward, lopsided void (e.g. 60% empty top vs crowded bottom)?
+  5. **Asset Visibility & Integrity:** Is the 3D hero asset fully celebrated, or is it awkwardly covered, cropped, or suffocated behind containers?
+  6. **Reader Empathy & Hook Strength:** Would a modern human stop scrolling? Is the headline punchy, conversational, and compelling—or does it sound like a stiff academic textbook or robot translation?
+  7. **Clean Canvas (Zero Corner Clutter):** Are the corners free of unnecessary metadata noise (fake report tags, corner checkmarks)? Is the focus 100% on what matters?
+  8. **Text Economy & Pacing:** Is the copy concise, high-yield, and easy to digest without forcing text into tight spaces?
+  9. **Mobile Contrast & Scale:** All copy `>= 18px` and crisp (`>= 4.5:1` contrast)?
+- If **any** check fails, you must revise the HTML/CSS layout or asset placement and re-render until the graphic looks truly publication-grade.
