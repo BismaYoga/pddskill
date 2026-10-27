@@ -70,6 +70,16 @@ Balance is NOT just text alignment—it is the harmonious relationship between *
 - **Asset Integrity & Non-Occlusion:** Never awkwardly cover, bury, or clip critical 3D assets behind cards or containers. If a 3D asset overlaps a bottom sheet, the asset must be 80%+ visible and elevated above the card with directional drop shadows, NOT suffocated or amputated by the container.
 - **Clean Canvas & Zero Corner Clutter:** Eliminate useless decorative corner tags (e.g. `REPORT // 2026`, fake tech badges, corner checkmarks, arbitrary labels). Modern high-taste design is radically clean: keep only essential anchors (e.g., quiet slide counter `01 / 05` and swipe cue `Geser →`). Let the reader focus 100% on the core message and visual hero.
 
+### 2.6 The Harmonic Vertical Spacing System (Equalized Gap Theorem)
+On a `1080 × 1350 px` canvas, distance between elements must follow a disciplined, mathematically harmonious rhythm:
+- **Never allow extreme gap ratios:** A gap of `36px` above an asset and `160px` below it creates an uncomfortable visual disconnect where the asset appears glued to the headline and detached from the card.
+- **Standardized Inter-Element Gap Band (`60px – 80px`):**
+  - **Top Edge Margin:** `100px – 120px`
+  - **Gap A (Headline Block to 3D Asset):** `70px – 85px`
+  - **Gap B (3D Asset to Grounding Container/Card):** `70px – 85px` *(must equal Gap A within ±10px!)*
+  - **Card-to-Bottom Margin:** `60px – 70px`
+- **Result:** The 3D asset is optically suspended in equilibrium, breathing equally between the headline above and the container below.
+
 ---
 
 ### 3.1 Modern Social Editorial Copywriting & The "Scroll-Stopper" Hook
@@ -159,7 +169,7 @@ Follow these 5 steps strictly on every design task:
   1. **Zero Slop:** No `•` bullets/dots, no pill capsules, no fake buttons, no floating clipart, no UI window titlebars?
   2. **Word Spacing & Margins:** No collided uppercase words (`WEBSITEKAMU`) and `>= 72px` safe edge margins?
   3. **Seamless Blending:** Zero visible rectangular seam/box around the hero subject?
-  4. **Negative Space Balance:** Is empty space intentionally distributed across the whole canvas, or is there an awkward, lopsided void (e.g. 60% empty top vs crowded bottom)?
+  4. **Negative Space & Harmonic Spacing Balance:** Are the gaps between elements balanced? (e.g., is the gap above the asset equal within ±10px to the gap below it, avoiding 30px vs 160px disconnects?). Is empty space intentionally distributed without dead voids?
   5. **Asset Visibility & Integrity:** Is the 3D hero asset fully celebrated, or is it awkwardly covered, cropped, or suffocated behind containers?
   6. **Reader Empathy & Hook Strength:** Would a modern human stop scrolling? Is the headline punchy, conversational, and compelling—or does it sound like a stiff academic textbook or robot translation?
   7. **Clean Canvas (Zero Corner Clutter):** Are the corners free of unnecessary metadata noise (fake report tags, corner checkmarks)? Is the focus 100% on what matters?
