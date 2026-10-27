@@ -57,6 +57,24 @@ Hero imagery and display typography must **yield space to each other**—never f
 
 ---
 
+
+### 2.4 The Quadrant Equilibrium Rule (Anti-Jompang / Anti-Lopsided)
+Divide the canvas into 4 visual quadrants (Top-Left, Top-Right, Bottom-Left, Bottom-Right):
+- **Never leave an entire quadrant as a hollow desert** while the opposite quadrant is overloaded with visual mass.
+- If a directional subject (e.g., cybernetic robot arm) enters from Bottom-Left pointing toward Top-Right, the Top-Left must hold the headline lockup, and Bottom-Right must hold the grounding copy container to complete the diagonal kinetic counterweight.
+- **Bottom Sheet Containment Ratio:** The height of any bottom sheet or container card must tightly hug its typography (`padding: 48px–56px`). Never leave a 150px–200px blank empty void at the bottom of a card—this creates a hollow "jompang" bottom.
+
+---
+
+### 5.1 Dynamic Carousel Pacing Wave (Anti-Monotony Directive)
+**Strictly FORBIDDEN:** Repeating the exact same layout template (e.g. identical bottom sheet card) across 3+ consecutive slides in a carousel. Social media audiences disengage immediately from visual repetition.
+A high-converting 5-slide carousel MUST follow a dynamic **visual pacing wave**:
+1. **Slide 1 (The Hook):** Centered monumental hero asset + punchy 3-line headline + zero paragraph clutter.
+2. **Slide 2 (The Paradigm Shift / Two-Tone Split):** Dark top (60%) + Ice-blue curved bottom sheet (40%) with overlapping 3D asset casting deep directional shadow.
+3. **Slide 3 (The Mechanics / Isometric Split):** Isometric 3D asset floating in upper field with dual-column or stepped feature highlights below.
+4. **Slide 4 (Action / Diagonal Kinetic Vector):** Directional 3D asset (e.g., hand interacting with screen) with cross-diagonal text placement for maximum kinetic energy.
+5. **Slide 5 (The Grand Climax / Zero-Sheet Release):** Break out of the bottom-sheet container! Full-bleed deep studio canvas featuring an iconic symbolic 3D sculpture, a masterclass editorial quote, and a clear, quiet bookmark/share takeaway.
+
 ## 3. Modern Typography & Mobile Legibility Rules
 
 - **Maximum 3 Hierarchy Tiers:** Limit any single canvas to (1) Micro Kicker/Meta, (2) Hero Display Headline, and (3) Editorial Sub-hook.
