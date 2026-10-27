@@ -118,6 +118,7 @@ A poster or carousel lives and dies by its editorial hook. Never write like an a
 
 ### 5.1 Benchmark Reference (Cara Berpikir, Bukan Template)
 - **Living Benchmark:** [http://202.10.47.34/gastrip/halodev/](http://202.10.47.34/gastrip/halodev/)
+- **Halodev Brand Synergy:** Jika mendesain konten resmi Halodev, wajib merujuk pada skill [`halodev-branding`](../halodev-branding/SKILL.md) (warna hijau `#06BE72` & biru `#03A9FF`, kanvas biru tua `#060B14` & putih bersih `#FFFFFF`, watermark `@halodev_id` font Poppins tanpa logo grafis).
 - **Golden Rule:** **Tiru cara berpikir dalam pembuatannya, BUKAN meniru template visualnya!**
   - Yang ditiru: Empati pembaca modern, hook tajam tanpa sub-teks di cover, teks hemat to-the-point, ritme pergantian warna antar-slide, pencahayaan 3D nyata dengan soft shadows, dan spatial yield (aset tidak tertutup teks).
   - Yang dihindari: Mengulang kombinasi warna atau susunan posisi yang sama secara mekanis di setiap proyek.
