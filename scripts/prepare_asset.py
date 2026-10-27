@@ -9,7 +9,11 @@ Subcommands:
      python3 prepare_asset.py cover <input> <output.jpg> [--width 1080] [--height 1350] [--focus top|center|bottom]
 
   2. Seamless studio placement enforcing the Spatial Yield Rule (zero bounding-box seam):
-     python3 prepare_asset.py place-seamless <input> <output.jpg> [--zone bottom|top] [--bg "#050609"] [--width 1080] [--height 1350] [--scale 0.86]
+     python3 prepare_asset.py place-seamless <input> <output.jpg> [--zone bottom|top|center] [--bg "#050609"]
+         [--top Y] [--bottom Y] [--align center|left|right] [--anchor center|top|bottom]
+         [--scale 0.86] [--glow 0.12 --glow-color "#f97316"] [--width 1080] [--height 1350]
+     - Transparent PNG cutouts keep original colors (no vignette); opaque renders get bg-matched + feathered.
+     - The asset is always FIT inside the zone (never cropped) and prints ASSET_BOX for gap math.
 """
 
 import argparse
@@ -72,60 +76,107 @@ def cmd_cover(args: argparse.Namespace) -> None:
     print(f"Saved cover-cropped asset: {args.output} ({args.width}x{args.height}, focus={args.focus})")
 
 
+def _alpha_bbox(alpha: np.ndarray, thresh: float = 0.02):
+    ys, xs = np.where(alpha > thresh)
+    if ys.size == 0:
+        return None
+    return int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1
+
+
 def cmd_place_seamless(args: argparse.Namespace) -> None:
     bg_rgb = parse_hex_color(args.bg)
+    target_bg = np.array(bg_rgb, dtype=np.float32)
     raw = open_memory_safe(args.input, target_max_dim=1800).convert("RGBA")
 
-    target_w = int(round(args.width * args.scale))
-    target_h = max(1, int(round(raw.height * (target_w / raw.width))))
+    # Detect true transparent cutouts (PNG/WebP with real alpha) vs opaque studio renders
+    raw_alpha = np.asarray(raw.getchannel("A"), dtype=np.float32) / 255.0
+    has_alpha = float((raw_alpha < 0.5).mean()) > 0.01
+    if has_alpha:
+        # Trim invisible padding so sizing/placement uses the real subject silhouette
+        bbox = _alpha_bbox(raw_alpha)
+        if bbox:
+            raw = raw.crop(bbox)
+
+    # Resolve the vertical zone the asset is allowed to occupy (Spatial Yield Rule, SKILL.md 2.1)
+    if args.zone == "bottom":
+        zone_top = args.top if args.top is not None else 520
+        zone_bottom = args.bottom if args.bottom is not None else args.height - 40
+    elif args.zone == "top":
+        zone_top = args.top if args.top is not None else 60
+        zone_bottom = args.bottom if args.bottom is not None else 780
+    else:  # center / custom
+        zone_top = args.top if args.top is not None else 120
+        zone_bottom = args.bottom if args.bottom is not None else args.height - 120
+    zone_top = max(0, zone_top)
+    zone_bottom = min(args.height, zone_bottom)
+    zone_h = max(1, zone_bottom - zone_top)
+
+    # Fit INSIDE the zone (never crop/amputate the subject - SKILL.md 2.5 Asset Integrity)
+    max_w = args.width * args.scale
+    fit = min(max_w / raw.width, zone_h / raw.height)
+    target_w = max(1, int(round(raw.width * fit)))
+    target_h = max(1, int(round(raw.height * fit)))
     asset = raw.resize((target_w, target_h), Image.Resampling.LANCZOS)
 
     arr = np.asarray(asset, dtype=np.float32)
     rgb = arr[:, :, :3].copy()
     orig_alpha = arr[:, :, 3] / 255.0
 
-    # Sample outer 12px border median RGB to detect mismatch between asset studio bg and canvas bg
-    b = min(12, target_h // 10, target_w // 10)
-    border_pixels = np.concatenate(
-        [
-            rgb[:b, :, :].reshape(-1, 3),
-            rgb[-b:, :, :].reshape(-1, 3),
-            rgb[:, :b, :].reshape(-1, 3),
-            rgb[:, -b:, :].reshape(-1, 3),
-        ],
-        axis=0,
-    )
-    edge_bg = np.median(border_pixels, axis=0)
-    target_bg = np.array(bg_rgb, dtype=np.float32)
+    if has_alpha:
+        # Clean cutout: keep subject colors untouched, alpha already defines the silhouette.
+        final_alpha = orig_alpha
+    else:
+        # Opaque studio render: match its backdrop tone to the canvas hex, then feather edges to zero.
+        b = max(1, min(12, target_h // 10, target_w // 10))
+        border_pixels = np.concatenate(
+            [
+                rgb[:b, :, :].reshape(-1, 3),
+                rgb[-b:, :, :].reshape(-1, 3),
+                rgb[:, :b, :].reshape(-1, 3),
+                rgb[:, -b:, :].reshape(-1, 3),
+            ],
+            axis=0,
+        )
+        edge_bg = np.median(border_pixels, axis=0)
+        diff_from_edge = np.linalg.norm(rgb - edge_bg, axis=2)
+        bg_similarity = np.clip(1.0 - (diff_from_edge / 42.0), 0.0, 1.0) ** 1.5
+        rgb = np.clip(rgb + (target_bg - edge_bg) * bg_similarity[:, :, None], 0.0, 255.0)
 
-    # Shift background-tone pixels smoothly toward exact target canvas hex while protecting bright/saturated subject pixels
-    diff_from_edge = np.linalg.norm(rgb - edge_bg, axis=2)
-    bg_similarity = np.clip(1.0 - (diff_from_edge / 42.0), 0.0, 1.0) ** 1.5
-    rgb = rgb + (target_bg - edge_bg) * bg_similarity[:, :, None]
-    rgb = np.clip(rgb, 0.0, 255.0)
+        # Super-ellipse feather mask reaching exactly 0.0 at all 4 edges (zero rectangular seam)
+        yy = np.linspace(-1.0, 1.0, target_h, dtype=np.float32)[:, None]
+        xx = np.linspace(-1.0, 1.0, target_w, dtype=np.float32)[None, :]
+        dist = (np.abs(xx) ** 3.2 + np.abs(yy) ** 3.2) ** (1.0 / 3.2)
+        t = np.clip((dist - 0.68) / (0.995 - 0.68), 0.0, 1.0)
+        final_alpha = orig_alpha * (1.0 - (t * t * (3.0 - 2.0 * t)))
 
-    # Build smooth super-ellipse feather mask that reaches strictly 0.0 at all 4 edges (zero rectangular seam)
-    yy = np.linspace(-1.0, 1.0, target_h, dtype=np.float32)[:, None]
-    xx = np.linspace(-1.0, 1.0, target_w, dtype=np.float32)[None, :]
-    # Super-ellipse distance (p=3.2 preserves generous interior while rounding corners & edges smoothly)
-    dist = (np.abs(xx) ** 3.2 + np.abs(yy) ** 3.2) ** (1.0 / 3.2)
-    # Smoothstep falloff starting at 0.68 -> 0.995
-    t = np.clip((dist - 0.68) / (0.995 - 0.68), 0.0, 1.0)
-    smooth_falloff = 1.0 - (t * t * (3.0 - 2.0 * t))
-    final_alpha = orig_alpha * smooth_falloff
-
-    canvas = np.zeros((args.height, args.width, 3), dtype=np.float32)
+    canvas = np.empty((args.height, args.width, 3), dtype=np.float32)
     canvas[:, :] = target_bg
 
-    x_off = (args.width - target_w) // 2
-    if args.zone == "bottom":
-        # Yield upper ~490px for clean top-anchored typography
-        y_off = max(460, args.height - target_h - 30)
-    else:
-        # Elevate asset into upper zone so bottom-anchored typography has room below
-        y_off = min(70, max(20, (args.height // 2 - target_h) // 2 + 40))
+    if args.glow > 0:
+        # Subtle ambient radial glow behind the subject (opacity-controlled, never a hard disc)
+        glow_rgb = np.array(parse_hex_color(args.glow_color), dtype=np.float32)
+        cy = zone_top + zone_h / 2.0
+        cx = args.width / 2.0
+        gy = np.arange(args.height, dtype=np.float32)[:, None]
+        gx = np.arange(args.width, dtype=np.float32)[None, :]
+        r = np.sqrt(((gx - cx) / (target_w * 0.75)) ** 2 + ((gy - cy) / (target_h * 0.65)) ** 2)
+        g = np.clip(1.0 - r, 0.0, 1.0) ** 2 * args.glow
+        canvas = canvas * (1.0 - g[:, :, None]) + glow_rgb * g[:, :, None]
 
-    # Clip placement bounds safely onto canvas
+    margin = args.margin
+    if args.align == "left":
+        x_off = margin
+    elif args.align == "right":
+        x_off = args.width - margin - target_w
+    else:
+        x_off = (args.width - target_w) // 2
+    if args.anchor == "top":
+        y_off = zone_top
+    elif args.anchor == "bottom":
+        y_off = zone_bottom - target_h
+    else:
+        y_off = zone_top + (zone_h - target_h) // 2
+
     src_x0 = max(0, -x_off)
     src_y0 = max(0, -y_off)
     dst_x0 = max(0, x_off)
@@ -141,12 +192,16 @@ def cmd_place_seamless(args: argparse.Namespace) -> None:
             sub_rgb * sub_a + dst_slice * (1.0 - sub_a)
         )
 
-    out_im = Image.fromarray(np.clip(canvas, 0, 255).astype(np.uint8), mode="RGB")
+    out_im = Image.fromarray(np.clip(canvas, 0, 255).astype(np.uint8))
     os.makedirs(os.path.dirname(os.path.abspath(args.output)) or ".", exist_ok=True)
     out_im.save(args.output, quality=93, optimize=True)
+    mode = "alpha-cutout" if has_alpha else "opaque-feathered"
     print(
-        f"Saved seamless studio canvas: {args.output} ({args.width}x{args.height}, zone={args.zone}, bg={args.bg})"
+        f"Saved seamless studio canvas: {args.output} ({args.width}x{args.height}, zone={args.zone}, "
+        f"bg={args.bg}, mode={mode})"
     )
+    # Exact subject bounds so the HTML layer can enforce Gap A == Gap B (SKILL.md 2.6)
+    print(f"ASSET_BOX x={x_off} y={y_off} w={target_w} h={target_h} top={y_off} bottom={y_off + target_h}")
 
 
 def main() -> None:
@@ -167,7 +222,15 @@ def main() -> None:
     )
     p_place.add_argument("input")
     p_place.add_argument("output")
-    p_place.add_argument("--zone", choices=["bottom", "top"], default="bottom")
+    p_place.add_argument("--zone", choices=["bottom", "top", "center"], default="bottom")
+    p_place.add_argument("--top", type=int, default=None, help="Override zone top Y (px)")
+    p_place.add_argument("--bottom", type=int, default=None, help="Override zone bottom Y (px)")
+    p_place.add_argument("--align", choices=["center", "left", "right"], default="center")
+    p_place.add_argument("--anchor", choices=["center", "top", "bottom"], default="center",
+                         help="Vertical anchor of the asset inside its zone")
+    p_place.add_argument("--margin", type=int, default=80, help="Side margin for left/right align")
+    p_place.add_argument("--glow", type=float, default=0.0, help="Ambient glow opacity 0-0.3 (e.g. 0.12)")
+    p_place.add_argument("--glow-color", default="#f97316")
     p_place.add_argument("--bg", default="#050609")
     p_place.add_argument("--width", type=int, default=1080)
     p_place.add_argument("--height", type=int, default=1350)

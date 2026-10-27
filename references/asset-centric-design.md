@@ -38,19 +38,20 @@ Raw Transparent PNG
 Empty space is sacred in editorial design. When a layout feels too empty:
 - **WRONG (Amateur AI approach):** Fill the void with paragraphs of text, fake SaaS metric cards (`+38%`), or rounded pill boxes with pulsing green dots (`● LIVE`).
 - **RIGHT (Professional Human approach):** Introduce **disciplined graphic elements** that provide structural tension without cognitive clutter:
-  - **Circular Typographic Seal:** A delicate spinning or static ring of small caps (`✦ ATELIER NINETEEN • ARCHIVE COHORT 2026`).
-  - **Architectural Registration Marks:** Crosshairs (`+`), fine coordinate lines, hairline rulers with tick marks.
-  - **Serial / Metadata Tag:** Minimalist alphanumeric index (`REF // 09-MOVE-26`) set in clean monospace.
-  - **Secondary Graphic Accent:** A subtle geometric prism or subtle vector arc that guides the eye towards the hero focal point.
+  - **Scale & Air First:** Usually the right fix is to enlarge the hero asset or headline, not add things. Empty space is a feature.
+  - **Hairline Structure:** A single `1px` hairline rule or a subtle vector arc that guides the eye toward the hero focal point.
+  - **Ambient Light:** A soft radial glow (`opacity ≤ 0.15`) behind the subject in the accent hue (`prepare_asset.py --glow 0.12`).
+  - **Poster-only accents (Archetype D):** Delicate registration crosshairs (`+`) used sparingly — never on news, luxury, or carousel value slides.
+  - ❌ Never add decorative corner tags, serial codes (`REF // 09`), seals with `•` separators, or fake badges (SKILL.md §1 Corner Clutter).
 
 ---
 
-## 5. The Two Cardinal Sins of Feed Graphics
+## 4. The Two Cardinal Sins of Feed Graphics
 
 ### A. The "Fake Clickable Button" Trap
 On a social media post (Instagram 4:5 or 1:1), placing a rounded web button (`[ DAFTAR SEKARANG → ]`) is completely irrational—a graphic on a feed cannot be clicked. Professional art directors replace buttons with **valuable typographic metadata**:
-- Date and Start Time: `MINGGU • 05:45 WIB`
-- Exact Venue / Geographical Coordinates: `GBK SENAYAN, JAKARTA` or `8°39' S • 119°34' E`
+- Date and Start Time: `MINGGU — 05:45 WIB`
+- Exact Venue / Geographical Coordinates: `GBK SENAYAN, JAKARTA` or `8°39' S  119°34' E`
 - Official Handle or Tagline: `@KLUBLARINUSANTARA` or `EDISI OKTOBER 2026`
 
 ### B. Asset Chroma Discipline (No Rogue Colors)

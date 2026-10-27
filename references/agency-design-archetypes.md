@@ -57,12 +57,12 @@ Curated modern design systems inspired by contemporary creative studios (Pentagr
 - **Best For:** Running clubs, tournaments, music festivals, street culture, high-energy product drops.
 - **Color System:**
   - Base: `#f2efe9` (Raw Poster Stock) or `#090a0c` (Asphalt Black)
-  - High-Voltage Accent: `#ccff00` (Volt Acid) or `#ff4400` ( Track Blaze)
+  - High-Voltage Accent: `#ccff00` (Volt Acid) or `#ff4400` (Track Blaze)
 - **Typography Pairing:**
   - Monumental Display: `Syne` (`800`) or `Anton` (`400`, `96px–128px`, `line-height: 0.90`, `word-spacing: 10px`)
   - Technical Spec Copy: `Space Grotesk` (`500`–`700`, `20px–24px`)
 - **Spatial Treatment:**
-  - Full-bleed motion photography or rim-lit dynamic athlete overlapping monumental typography. Corner registration crosshairs (`+`) or clean coordinate stamps (`JKT // 10K`) instead of web cards.
+  - Full-bleed motion photography or rim-lit dynamic athlete overlapping monumental typography. Replace web cards with real event metadata set in tracked type (date, venue, distance) grouped in one lockup; at most one delicate registration crosshair (`+`). No corner tags.
 
 ---
 

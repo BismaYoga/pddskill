@@ -15,6 +15,7 @@ Enforces Gestalt proximity, optical centering, tight typographic lockups, balanc
 
 ## Repository Contents
 - `SKILL.md`: Main instruction file containing comprehensive rules, failure post-mortems, and agency archetypes.
-- `scripts/`: Playwright rendering engine and SVG conversion helpers.
+- `scripts/render_graphic.py`: Low-RAM Playwright renderer (waits for fonts + images) with an automatic layout audit (text < 18px, safe-margin violations, banned bullet glyphs).
+- `scripts/prepare_asset.py`: Memory-safe cover crop and `place-seamless` compositor (alpha-aware for transparent PNG cutouts, fits assets inside the zone without cropping, prints `ASSET_BOX` for equal-gap spacing, optional ambient glow).
 - `references/`: Agency design archetypes and design reference guides.
 - `assets/`: 3D assets and photography resources.
