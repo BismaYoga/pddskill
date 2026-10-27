@@ -27,7 +27,7 @@ Every element on the canvas must serve visual communication or spatial tension. 
   - Never wrap category kickers in rounded pill borders/capsules (`[ CATEGORY ]`). Pure tracked typography conveys far greater authority.
   - Never use `•` as a metadata separator. Use clean whitespace alignment, a delicate hairline rule, or minimal `//` / `—` only when structurally needed.
 - **NO Fake Clickable Buttons:** Never draw website CTA buttons (`[ DAFTAR SEKARANG ]`, `[ APPLY NOW → ]`) on static graphics. For carousels, use a quiet typographic cue (`Geser →`). For events, replace the button with real metadata (date, venue, handle).
-- **NO Floating Clipart Satellites:** Never scatter random 3D coins, shields, bells, or floating social icon bubbles around the hero subject. One hero asset per canvas.
+- **Aset Pendukung & Satelit 3D Boleh Dipakai secara Terkondisi:** Elemen visual pendukung (seperti kepingan partikel, lencana, koin 3D, atau icon kontekstual) diperbolehkan selama dikondisikan dengan baik: memiliki keterkaitan erat dengan pesan slide, ditempatkan dengan tujuan visual yang terukur, pencahayaannya menyatu dengan lingkungan studio, dan tidak disebar acak-acakan hingga merusak fokus hero asset.
 - **NO Corner Clutter:** No decorative corner tags (`REPORT // 2026`, `REF // 09`), fake tech badges, corner checkmarks, or arbitrary labels. Keep only essential anchors: quiet slide counter (`01 / 05`) and swipe cue (`Geser →`).
 - **NO Stiff ID/Passport Portraits in News:** Never use blank, static bureaucratic pasfoto for news, policy, or crisis stories. Always use **contextual action photography** (passionate podium gestures, field inspections, authentic motion).
 - **NO Hard-Edge Cutouts on Food ("Sticker Effect"):** Never isolate food onto a dark/sterile void. Food relies on macro full-bleed sensory context (natural glaze, steam, wood/stone/linen surfaces, warm ambient light).
@@ -114,22 +114,44 @@ A poster or carousel lives and dies by its editorial hook. Never write like an a
 
 ---
 
-## 5. Instagram Carousel Architecture
+## 5. Instagram Carousel Architecture & Design Briefing
 
-### 5.1 Slide Content Rules
-- **Slide 1 (Thumb-Stopping Hook Cover):**
-  - **Under 15 words total**: clean Kicker + High-Tension Hook Headline (max 3 lines) + 1-line Provocative Sub-hook + quiet Slide Counter (`01 / 05`) & Swipe Cue (`Geser →`).
-  - Zero paragraphs, zero step lists, zero data boxes. One monumental hero asset.
-- **Slides 2 to N-1 (Editorial Value Breakdown):** Clean Swiss architectural grids, `1px` hairline dividers (`rgba(255,255,255,0.10)` on dark / `rgba(17,18,21,0.12)` on light), oversized index numbers (`01`, `02`), consistent `80px` alignment grid, **maximum 40 words per slide**.
-- **Final Slide:** A clear, quiet takeaway plus a bookmark/share cue in typography—never a fake button.
+### 5.1 Benchmark Reference (Cara Berpikir, Bukan Template)
+- **Living Benchmark:** [http://202.10.47.34/gastrip/halodev/](http://202.10.47.34/gastrip/halodev/)
+- **Golden Rule:** **Tiru cara berpikir dalam pembuatannya, BUKAN meniru template visualnya!**
+  - Yang ditiru: Empati pembaca modern, hook tajam tanpa sub-teks di cover, teks hemat to-the-point, ritme pergantian warna antar-slide, pencahayaan 3D nyata dengan soft shadows, dan spatial yield (aset tidak tertutup teks).
+  - Yang dihindari: Mengulang kombinasi warna atau susunan posisi yang sama secara mekanis di setiap proyek.
 
-### 5.2 Dynamic Carousel Pacing Wave (Anti-Monotony Directive)
-**FORBIDDEN:** Repeating the same layout template (e.g., identical bottom-sheet card) across 3+ consecutive slides. Follow a **visual pacing wave** (adapt colors to the chosen archetype):
-1. **Slide 1 (The Hook):** Centered monumental hero asset + punchy headline + zero paragraph clutter.
-2. **Slide 2 (The Paradigm Shift / Two-Tone Split):** Dark top (60%) + accent-tinted curved bottom sheet (40%) with the 3D asset overlapping it, casting a deep directional shadow.
-3. **Slide 3 (The Mechanics / Isometric Split):** Isometric asset floating in the upper field with dual-column or stepped highlights below.
-4. **Slide 4 (Action / Diagonal Kinetic Vector):** Directional asset (e.g., hand interacting with a screen) with cross-diagonal text placement.
-5. **Slide 5 (The Grand Climax / Zero-Sheet Release):** Break out of the container. Full-bleed deep canvas, one iconic symbolic sculpture, a masterclass editorial quote, and the quiet bookmark/share takeaway.
+### 5.2 Form Follows Message (Tata Letak Mengikuti Sifat Pesan — Anti-Template)
+**FORBIDDEN:** Menggunakan cetakan tata letak yang sama di setiap proyek atau mengulang layout grid yang identik di dua slide berturut-turut. Komposisi kanvas harus lahir secara organik dari sifat pesan di slide tersebut:
+- **Jika Pesan berupa Data Shock / Angka Besar:** Angka tersebut yang menjadi raksasa taktil di tengah kanvas (misal: `75%` bertekstur kristal), teks pendukung mengalah ringkas di bawahnya.
+- **Jika Pesan berupa Mindset Shift / Quotes Kontemplatif:** Komposisi minimalis dengan 70%+ ruang kosong bersih (*wide negative space*), tipografi anggun di tengah tanpa dipaksa dijejali aset besar jika tidak diperlukan.
+- **Jika Pesan berupa Duel / Komparasi (Before vs After):** Split horizontal dua sisi, perbandingan dua kartu bernuansa beda (dull vs glowing), atau teks yang dicoret tegas.
+- **Jika Pesan berupa Hero Showcase:** Aset 3D mengambil panggung dominan (*macro close-up* / *full-bleed*), teks mengalah di sisi kanvas.
+- **Jika Pesan berupa Dialog / Situasi Nyata:** Tata letak mengadaptasi balon obrolan estetik, terminal kode, atau dialog bertingkat.
+
+### 5.3 Dynamic Visual Pacing Wave (Ritme Kontras Antar-Slide)
+- **Do NOT lock every slide to solid dark hexes.** Variasikan kontras nilai (*Value Contrast*) dan saturasi agar mata pembaca tidak mengalami kelelahan visual (*visual fatigue*):
+  - Kombinasikan slide gelap dramatis, slide terang bersih (*warm cream* `#F4EFEA` atau *crisp white* `#FFFFFF` dengan tipografi arang gelap), dan slide bertema tonal/split.
+- **AI-Generated Environmental Backgrounds with Gradient Overlays:**
+  - Backgrounds can feature generated scenes (architectural concrete, studio podiums, soft haze, textured plaster, ribbed glass bokeh).
+  - **Mandatory Legibility Scrim:** Always overlay a directional `linear-gradient` (from 90-95% opaque tone-matched background where text sits to 0% transparent where the asset and light rays shine) so text is 100% crisp without sacrificing the cinematic depth of the image.
+
+### 5.4 Modern Conversational Copywriting & Reader Empathy
+- **Speak to Everyone:** Never force rigid corporate or managerial framing unless explicitly requested. Write for modern ambitious humans—students, freelancers, creators, founders alike.
+- **Ruthless Text Economy:** Cut unnecessary filler. Say the point in 1-2 sharp, conversational sentences that hit like a realization ("Oh, ini maksudnya!").
+- **Hook Simplicity:** Cover hook must stand on its own without needing cluttered explanations. **Haram ada sub-teks di cover jika headline sudah kuat.**
+
+### 5.5 Master Design Brief Blueprint (Tahap Wajib Sebelum Produksi)
+Sebelum mengeksekusi HTML/CSS, agen wajib membedah konsep ke dalam struktur brief terstandar:
+1. *Ringkasan Strategi:* Topik, target audiens (semua kalangan), tone of voice, dan gelombang ritme warna.
+2. *Bedah Per-Slide:*
+   - Fungsi pesan (Hook, Mitos, Data Shock, Komparasi, Climax).
+   - Warna dasar & mood kanvas (Gelap / Terang / Tonal).
+   - Naskah teks pasti (Headline bold, body 1-2 baris hemat).
+   - Gaya layout & grid yang merespons pesan (Spatial Yield, rasio ruang kosong).
+   - Spesifikasi aset 3D (Subjek, material fisik, skala proporsional).
+   - Pencahayaan studio & directional gradient scrim.
 
 ---
 
@@ -163,15 +185,23 @@ Follow these 5 steps on every design task.
 - **Figma Compatibility Rule:** Figma ignores `@import url(...)` inside `<style>`. Set `font-family`, `font-weight`, `font-size`, `letter-spacing`, and `fill` **directly as XML attributes** on `<text>` / `<tspan>` (template in [agency-design-archetypes.md](./references/agency-design-archetypes.md)).
 
 ### Step 5: MANDATORY Visual Self-Critique Gate (Before Replying!)
-**NEVER send a design blind.** After rendering, **view the generated PNG/preview** and audit it against these 9 criteria:
-1. **Zero Slop:** No `•` bullets/dots, pill capsules, fake buttons, floating clipart, or UI window titlebars?
-2. **Word Spacing & Margins:** No collided uppercase words (`WEBSITEKAMU`), `>= 72px` side margins, and a clean `AUDIT` line?
-3. **Seamless Blending:** Zero visible rectangular seam/box around the hero subject?
-4. **Negative Space & Harmonic Spacing:** Gap above the asset equals the gap below within ±10px (no 30px vs 160px)? Empty space intentional, no dead voids or hollow quadrants?
-5. **Asset Visibility & Integrity:** Is the hero asset fully celebrated—not cropped, covered, or suffocated behind containers?
-6. **Reader Empathy & Hook Strength:** Would a modern human stop scrolling? Is the headline punchy and conversational, not a stiff textbook or robot translation?
-7. **Clean Canvas:** Corners free of metadata noise (fake report tags, checkmarks)? Focus 100% on what matters?
-8. **Text Economy & Pacing:** Copy concise and easy to digest? Carousel layouts varied per the pacing wave?
-9. **Mobile Contrast & Scale:** All copy `>= 18px` and crisp (`>= 4.5:1` contrast)?
+**NEVER send a design without self-reviewing each slide.** After rendering, **inspect every rendered slide image** and audit it against these core design principles:
+1. **Holistic Balance & Negative Space Equilibrium:**
+   - Balance is NOT just text centering—it is the dynamic equilibrium between **Asset Mass**, **Text Mass**, and **Empty (Negative) Space**.
+   - Check every slide: Is any quadrant "jompang" (deserted or overly heavy)? Is empty space distributed harmoniously?
+2. **Asset Prominence & Non-Occlusion:**
+   - Are assets scaled prominently (never shrunken or timid)?
+   - Are assets fully celebrated—never cropped, buried behind cards, or amputated?
+   - Do assets play with rich light, volumetric glow, reflections, and realistic soft shadows?
+3. **Background Variety & Layering:**
+   - Is the carousel dynamic (alternating dark, light/warm cream, and tonal backgrounds)?
+   - Are background images layered with tone-matched linear/radial gradients so text has 100% crisp legibility?
+4. **Copywriting & Modern Reader Empathy:**
+   - Is the language natural, conversational, and instantly understood by anyone?
+   - Is the cover hook razor-sharp and free of redundant sub-text?
+   - Has all unnecessary fluff been ruthlessly cut?
+5. **Zero Slop & Technical Hygiene:**
+   - No `•` bullets/dots, pill capsules, fake buttons, unconditioned random clipart/satellites, or UI window titlebars?
+   - Word spacing intact (no `WEBSITEKAMU`), `>= 72px` side margins, all copy `>= 18px` with clean contrast?
 
-If **any** check fails, revise the HTML/CSS or asset placement and re-render until the graphic is truly publication-grade.
+If **any** check fails, revise the HTML/CSS or asset placement and re-render until you are 100% confident the design is truly publication-grade.
