@@ -114,7 +114,7 @@ A poster or carousel lives and dies by its editorial hook. Never write like an a
 
 ---
 
-## 5. Instagram Carousel Architecture & Design Briefing
+## 5. Instagram Carousel Architecture, Brainstorming & Design Briefing
 
 ### 5.1 Benchmark Reference (Cara Berpikir, Bukan Template)
 - **Living Benchmark:** [http://202.10.47.34/gastrip/halodev/](http://202.10.47.34/gastrip/halodev/)
@@ -122,7 +122,62 @@ A poster or carousel lives and dies by its editorial hook. Never write like an a
   - Yang ditiru: Empati pembaca modern, hook tajam tanpa sub-teks di cover, teks hemat to-the-point, ritme pergantian warna antar-slide, pencahayaan 3D nyata dengan soft shadows, dan spatial yield (aset tidak tertutup teks).
   - Yang dihindari: Mengulang kombinasi warna atau susunan posisi yang sama secara mekanis di setiap proyek.
 
-### 5.2 Form Follows Message (Tata Letak Mengikuti Sifat Pesan — Anti-Template)
+### 5.2 Step-by-Step Brainstorming & Viral Content Discovery (Audience-First & Meme-Relatable)
+Sebelum masuk ke perancangan visual, agen wajib membedah topik dan merumuskan sudut pandang (*angle*) yang magnetis untuk audiens luas (mahasiswa, pekerja, freelancer, tech enthusiast, kreator):
+
+1. **Step 1: Trend & Friction Scanning (Mencari Keresahan Kolektif)**
+   - Cari isu yang sedang hangat dibicarakan di media sosial, industri tech, karir, atau dinamika kehidupan sehari-hari.
+   - Temukan friksi emosional: mitos yang dipercaya banyak orang vs fakta sebenarnya, over-hype teknologi baru, atau kebiasaan konyol yang dialami hampir semua orang tapi jarang diakui secara terbuka.
+2. **Step 2: The Universality Filter (Ubah Niche Menjadi Relevan untuk Semua Kalangan)**
+   - Hindari bahasa teknis atau manajerial yang kaku dan mengintimidasi (misal: "Optimasi Query Database PostgreSQL").
+   - Terjemahkan ke analogi manusiawi yang relate ke semua orang (misal: "Kenapa Aplikasi yang Kita Buat Sering Lemot Pas Mau Dipamerin ke Orang?").
+   - Uji dengan pertanyaan emas: *"Apakah orang non-expert yang scrolling feed dalam 2 detik langsung paham, penasaran, dan merasa ini relevan buat dia?"*
+3. **Step 3: Meme-Relatable Satire & Witty Humor (Cerdas, Jenaka, Tetap On-Point)**
+   - Gunakan humor cerdas, sindiran halus (*playful irony*), atau kejujuran santai (*self-deprecating truth*).
+   - Jangan gunakan jokes garing atau meme receh yang merusak wibawa desain agensi; gunakan humor berbasis realita ("Di medsos gayanya kayak arsitek sistem masa depan, di kantor aslinya masih panik kalau terminal keluar teks merah").
+4. **Step 4: The 2-Second Tension Hook Formulation (Rumus Cover Nendang)**
+   - Buat headline cover yang memicu paradoks, rasa penasaran, atau kejutan (*pattern interrupt*).
+   - **Haram Sub-Teks di Cover:** Headline utama harus mandiri, tebal, dan kuat tanpa perlu disangga kalimat penjelas panjang di cover.
+   - Contoh Perbandingan:
+     - ❌ *Biasa/Membosankan:* "Perkembangan Bahasa Pemrograman PHP di Tahun 2026"
+     - ✅ *Tension & Relatable:* "PHP Masih Hidup. Dan Diam-Diam Masih Dipakai Buat Nopang Internet."
+5. **Step 5: Structuring the 5-Slide Narrative Arc**
+   - **Slide 1 (The Hook):** Menangkap perhatian dalam 2 detik, paradoks utama, zero fluff.
+   - **Slide 2 (The Illusion / The Common Myth):** Membedah apa yang selama ini salah kaprah atau over-hyped di publik.
+   - **Slide 3 (The Reality Check / Data Shock):** Fakta mengejutkan atau komparasi tajam di dunia nyata.
+   - **Slide 4 (The Core Mechanism / The Actionable Shift):** Solusi atau cara pandang baru yang mencerahkan.
+   - **Slide 5 (The Climax & Bookmark Takeaway):** Pernyataan penutup yang berbobot, takeaway emosional yang layak disimpan/dishare.
+
+### 5.3 Step-by-Step Perancangan Master Design Brief (Slide-by-Slide Blueprint)
+Setelah narasi matang, agen wajib merancang **Master Design Brief** secara terstruktur dan terperinci sebelum menulis kode HTML/CSS:
+
+1. **Langkah 1: Fondasi Strategi & Tone Visual**
+   - *Target Persona:* Deskripsi ringkas siapa yang membaca (anak muda, tech folks, profesional, umum).
+   - *Tone of Voice:* Satir elegan, percaya diri, edukatif, bersahabat.
+   - *Archetype Visual:* Memilih dari [agency-design-archetypes.md](./references/agency-design-archetypes.md) (misal: Dark Precision Tech, Swiss Minimalist, Warm Editorial).
+2. **Langkah 2: Choreography Pacing Wave (Alur Warna Antar-Slide)**
+   - Rancang pergantian kontras warna setiap slide agar pembaca tidak bosan (misal: Slide 1 Dark `#0D0F12` → Slide 2 Cream `#F4EFEA` → Slide 3 Sand `#E6E0D6` → Slide 4 Split `#121316` → Slide 5 Dark Spotlight `#0D0F12`).
+3. **Langkah 3: Perumusan Detail Per-Slide (Format Wajib Brief)**
+   Setiap slide wajib memiliki spesifikasi teknis lengkap:
+   - **Slide Index & Peran Naratif:** (misal: Slide 02 — The Illusion / Duel).
+   - **Mood & Hex Background:** (misal: Warm Minimalist `#F4EFEA`).
+   - **Copywriting Naskah:**
+     - *Kicker/Meta:* (misal: `REALITA VS EKSPEKTASI` | `02 / 05`)
+     - *Headline Bold:* (Maksimal 2-3 baris, font besar, tracking ketat dengan word-spacing aman).
+     - *Body Hemat:* (Maksimal 1-2 baris, bahasa santai, bebas filler).
+     - *Action/Nav:* (`Geser →` atau bookmark takeaway).
+   - **Layout Architecture (Form Follows Message):**
+     - Sifat pesan menentukan layout (apakah split columns, top-anchored, central totemic, atau asymmetric kinetic).
+     - Alokasi rasio negative space (minimal 35-50% area lega).
+     - Zona koordinat teks vs aset (Spatial Yield Rule: teks di Y: 100–480px, aset di Y: 520–1280px, atau sebaliknya).
+   - **Spesifikasi Aset 3D & Satelit Terkondisi:**
+     - Subjek visual utama & material fisik (misal: Blue Sapphire ElePHPant berlapis frosted glass transparan dengan specular highlight).
+     - Aset pendukung/satelit (jika ada, harus bermakna dan terkondisi: misal kepingan partikel kristal melayang halus di orbit sudut, tidak menutupi teks).
+     - Pencahayaan: 3-point studio lighting (key light lembut, rim light biru, ambient floor bounce) + soft cast shadow di lantai/bidang bawah.
+   - **Directional Scrim Protection:**
+     - Menentukan arah gradien perlindungan (`linear-gradient(to bottom, #0D0F12 55%, transparent 100%)`) agar teks selalu 100% kontras dan tajam.
+
+### 5.4 Form Follows Message (Tata Letak Mengikuti Sifat Pesan — Anti-Template)
 **FORBIDDEN:** Menggunakan cetakan tata letak yang sama di setiap proyek atau mengulang layout grid yang identik di dua slide berturut-turut. Komposisi kanvas harus lahir secara organik dari sifat pesan di slide tersebut:
 - **Jika Pesan berupa Data Shock / Angka Besar:** Angka tersebut yang menjadi raksasa taktil di tengah kanvas (misal: `75%` bertekstur kristal), teks pendukung mengalah ringkas di bawahnya.
 - **Jika Pesan berupa Mindset Shift / Quotes Kontemplatif:** Komposisi minimalis dengan 70%+ ruang kosong bersih (*wide negative space*), tipografi anggun di tengah tanpa dipaksa dijejali aset besar jika tidak diperlukan.
@@ -130,36 +185,32 @@ A poster or carousel lives and dies by its editorial hook. Never write like an a
 - **Jika Pesan berupa Hero Showcase:** Aset 3D mengambil panggung dominan (*macro close-up* / *full-bleed*), teks mengalah di sisi kanvas.
 - **Jika Pesan berupa Dialog / Situasi Nyata:** Tata letak mengadaptasi balon obrolan estetik, terminal kode, atau dialog bertingkat.
 
-### 5.3 Dynamic Visual Pacing Wave (Ritme Kontras Antar-Slide)
+### 5.5 Dynamic Visual Pacing Wave (Ritme Kontras Antar-Slide)
 - **Do NOT lock every slide to solid dark hexes.** Variasikan kontras nilai (*Value Contrast*) dan saturasi agar mata pembaca tidak mengalami kelelahan visual (*visual fatigue*):
   - Kombinasikan slide gelap dramatis, slide terang bersih (*warm cream* `#F4EFEA` atau *crisp white* `#FFFFFF` dengan tipografi arang gelap), dan slide bertema tonal/split.
 - **AI-Generated Environmental Backgrounds with Gradient Overlays:**
   - Backgrounds can feature generated scenes (architectural concrete, studio podiums, soft haze, textured plaster, ribbed glass bokeh).
   - **Mandatory Legibility Scrim:** Always overlay a directional `linear-gradient` (from 90-95% opaque tone-matched background where text sits to 0% transparent where the asset and light rays shine) so text is 100% crisp without sacrificing the cinematic depth of the image.
 
-### 5.4 Modern Conversational Copywriting & Reader Empathy
+### 5.6 Modern Conversational Copywriting & Reader Empathy
 - **Speak to Everyone:** Never force rigid corporate or managerial framing unless explicitly requested. Write for modern ambitious humans—students, freelancers, creators, founders alike.
 - **Ruthless Text Economy:** Cut unnecessary filler. Say the point in 1-2 sharp, conversational sentences that hit like a realization ("Oh, ini maksudnya!").
 - **Hook Simplicity:** Cover hook must stand on its own without needing cluttered explanations. **Haram ada sub-teks di cover jika headline sudah kuat.**
-
-### 5.5 Master Design Brief Blueprint (Tahap Wajib Sebelum Produksi)
-Sebelum mengeksekusi HTML/CSS, agen wajib membedah konsep ke dalam struktur brief terstandar:
-1. *Ringkasan Strategi:* Topik, target audiens (semua kalangan), tone of voice, dan gelombang ritme warna.
-2. *Bedah Per-Slide:*
-   - Fungsi pesan (Hook, Mitos, Data Shock, Komparasi, Climax).
-   - Warna dasar & mood kanvas (Gelap / Terang / Tonal).
-   - Naskah teks pasti (Headline bold, body 1-2 baris hemat).
-   - Gaya layout & grid yang merespons pesan (Spatial Yield, rasio ruang kosong).
-   - Spesifikasi aset 3D (Subjek, material fisik, skala proporsional).
-   - Pencahayaan studio & directional gradient scrim.
 
 ---
 
 ## 6. Execution Workflow (Low-RAM Safe & Self-Verified)
 
-Follow these 5 steps on every design task.
+Follow these 7 steps on every design task:
 
-### Step 1: Memory-Safe Asset Preparation (1GB RAM Guard)
+### Step 0: Brainstorming & Viral Angle Discovery
+- Lakukan riset trend dan keresahan kolektif audiens sesuai §5.2.
+- Rumuskan 2-second tension hook (bebas sub-teks di cover) dan 5-slide narrative arc.
+
+### Step 1: Slide-by-Slide Master Design Brief
+- Susun brief produksi lengkap per-slide sesuai format blueprint §5.3 (naskah teks hemat, mood warna hex, layout choreography, spesifikasi aset 3D & material fisik, serta directional scrim).
+
+### Step 2: Memory-Safe Asset Preparation (1GB RAM Guard)
 - **NEVER** open raw master images (`>2500px` or `>10MB`) with plain `Image.open()`—this triggers Linux OOM kills (`exit 137`). When downloading from Wikimedia/web APIs, fetch `1280px–1600px` thumbnails.
 - Use [`prepare_asset.py`](./scripts/prepare_asset.py):
   - Full-bleed photo cover crop:
@@ -171,20 +222,20 @@ Follow these 5 steps on every design task.
   - Split layouts: add `--align left|right`; vertical anchoring inside the zone: `--anchor top|center|bottom`.
 - Use the resulting JPG as the full-canvas `background` of the HTML so asset and canvas share one exact hex.
 
-### Step 2: Compose Modern HTML/CSS Canvas
+### Step 3: Compose Modern HTML/CSS Canvas
 - Consult [agency-design-archetypes.md](./references/agency-design-archetypes.md) to pick an archetype that suits the topic's emotional psychology (never reuse the same skeleton across unrelated niches).
 - Lock `html, body` to exact dimensions (`1080 × 1350` for 4:5, `1080 × 1080` for 1:1, `1080 × 1920` for 9:16) with `margin: 0; overflow: hidden`.
 
-### Step 3: Render Pixel-Perfect PNG via Helper Script
+### Step 4: Render Pixel-Perfect PNG via Helper Script
 - Use the low-memory renderer (do NOT write ad-hoc Playwright scripts):
   `python3 {baseDir}/scripts/render_graphic.py <input.html> <output.png> 1080 1350 --preview`
 - The renderer waits for webfonts and images, then prints an **automatic `AUDIT:` report** (text < 18px, text inside the 72px side margin or clipped, banned `•`/`●` glyphs). **Every AUDIT issue must be fixed and re-rendered.**
 
-### Step 4: Export True Figma-Editable SVG
+### Step 5: Export True Figma-Editable SVG
 - Create a standalone `.svg` (`viewBox="0 0 1080 1350"`) alongside the PNG.
 - **Figma Compatibility Rule:** Figma ignores `@import url(...)` inside `<style>`. Set `font-family`, `font-weight`, `font-size`, `letter-spacing`, and `fill` **directly as XML attributes** on `<text>` / `<tspan>` (template in [agency-design-archetypes.md](./references/agency-design-archetypes.md)).
 
-### Step 5: MANDATORY Visual Self-Critique Gate (Before Replying!)
+### Step 6: MANDATORY Visual Self-Critique Gate (Before Replying!)
 **NEVER send a design without self-reviewing each slide.** After rendering, **inspect every rendered slide image** and audit it against these core design principles:
 1. **Holistic Balance & Negative Space Equilibrium:**
    - Balance is NOT just text centering—it is the dynamic equilibrium between **Asset Mass**, **Text Mass**, and **Empty (Negative) Space**.
