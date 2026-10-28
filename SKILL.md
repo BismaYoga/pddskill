@@ -100,11 +100,22 @@ A poster or carousel lives and dies by its editorial hook. Never write like an a
   - **Kicker / Counter / Swipe Cue:** `18px–22px`, `letter-spacing: 0.16em–0.22em`
 - **Genre-Matched Font Personas:** Pick Google Font pairings and color systems from [agency-design-archetypes.md](./references/agency-design-archetypes.md). Never put aggressive condensed fonts (*Bebas Neue*, *Anton*) on food, luxury hospitality, or clinical healthcare. Details: [typography-and-whitespace.md](./references/typography-and-whitespace.md).
 
+### 3.3 Dynamic Headline Architecture for Long Copy (Anti-Monotone Pacing)
+Ketika judul relatif panjang (terutama di Cover Slide 1), **DILARANG** merendernya dalam satu ukuran dan bobot yang seragam (*flat monotone*). Pecah judul menjadi 3 tingkatan ritme emosi dan kontras visual:
+1. **Lead-In Premise (Muted / Lighter Display):** Kalimat pengantar yang santai (`48px–54px`, `weight: 600`, warna slate/muted `rgba(255,255,255,0.65)` atau `#64748B`).
+2. **Core Tension (Heavy Display):** Pokok masalah atau konflik narasi (`72px–76px`, `weight: 800`, kontras tinggi `#FFFFFF` atau `#0F172A`).
+3. **Climax Punchline (Monumental Gradient / Pop):** Kata kunci gong pemungkas (`88px–98px`, `weight: 900`, aksen gradasi dinamis) yang menjadi magnet visual utama.
+
 ---
 
 ## 4. Seamless Asset Blending & Contrast Gate
 
-- **Zero Bounding-Box Seams (Anti-Pasted-Rectangle):**
+- **Zero Bounding-Box Seams (Anti-Pasted-Rectangle / Anti-Tempelan Protocol):**
+  - Mengapa aset render sering kelihatan "tempelan"? Karena piksel batas terluar (*border pixels*) pada render JPEG sering selisih 2–5 RGB dari warna kanvas target (misal kanvas `#FFFFFF` tapi background gambar `#EAEAEA`, atau kanvas `#060B14` tapi gambar `#040E17`).
+  - **The 3-Step Seam Eradication Protocol:**
+    1. **Border Tone Clamping:** Geser dan kunci piksel background aset agar warnanya 100% identik dengan target kanvas hex.
+    2. **Super-Ellipse Alpha Feathering (PNG):** Konversi aset menjadi PNG dengan channel alpha yang memudar halus (*smoothstep*) menjadi 0.0 pada 15–20% batas terluar.
+    3. **CSS Radial Feather Mask:** Pasang `-webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 40%, rgba(0,0,0,0.85) 60%, transparent 92%);` pada elemen `.bg-asset` di HTML untuk melarutkan gambar ke kanvas secara mutlak.
   - Never paste a square render/photo onto a dark or colored canvas if its background RGB (`#0b0d13`) differs even slightly from the canvas hex (`#050609`)—OLED screens expose faint rectangles immediately.
   - Always compose standalone assets with [`prepare_asset.py`](./scripts/prepare_asset.py) `place-seamless`:
     - **Transparent PNG cutouts** (everything in `assets/3d/` and `assets/people/`) keep their original colors; the script trims empty padding and fits the subject inside the zone—never cropped.
